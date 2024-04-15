@@ -40,6 +40,7 @@
       <x:String>UiPath.UIAutomationNext.Models</x:String>
       <x:String>UiPath.UIAutomationNext.Activities</x:String>
       <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -109,7 +110,7 @@
       <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Main" sap:VirtualizedContainerService.HintSize="512,1106" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main" sap:VirtualizedContainerService.HintSize="608,1686" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_CompanyData" />
     </Sequence.Variables>
@@ -118,26 +119,44 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dt_CompanyData]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="450,128" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="data" WorkbookPath="challenge.xlsx" />
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: The Automation Challenge" sap:VirtualizedContainerService.HintSize="450,890" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="IfNotOpen" ScopeGuid="16527374-b7eb-4515-b7e6-0a854f0879c9" Version="V2" WindowResize="Maximize">
+    <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dt_CompanyData]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="546,128" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="data" WorkbookPath="challenge.xlsx" />
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: The Automation Challenge" sap:VirtualizedContainerService.HintSize="546,1470" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="IfNotOpen" ScopeGuid="16527374-b7eb-4515-b7e6-0a854f0879c9" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,610" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="512,1190" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Zoom %100" sap:VirtualizedContainerService.HintSize="354,219" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][d(ctrl)][k(num0)][u(ctrl)][u(hk)]" Version="V3" />
-            <uix:NNavigateBrowser Action="Refresh" DisplayName="Refresh Browser" sap:VirtualizedContainerService.HintSize="354,122" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_1" Version="V3" />
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Start'" sap:VirtualizedContainerService.HintSize="354,182" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="16527374-b7eb-4515-b7e6-0a854f0879c9" Version="V3">
+            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Zoom %100" sap:VirtualizedContainerService.HintSize="450,219" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][d(ctrl)][k(num0)][u(ctrl)][u(hk)]" Version="V3" />
+            <uix:NNavigateBrowser Action="Refresh" DisplayName="Refresh Browser" sap:VirtualizedContainerService.HintSize="450,122" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_1" Version="V3" />
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Start'" sap:VirtualizedContainerService.HintSize="450,197" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="16527374-b7eb-4515-b7e6-0a854f0879c9" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://www.theautomationchallenge.com/" CvElementArea="45, 702, 339, 48" CvTextArea="194, 719, 42, 14" CvTextArgument="Start" CvType="Button" DesignTimeRectangle="48, 704, 336, 45" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='Start' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Start' tag='BUTTON' type='' class='bubble-element Button clickable-element' check:innerText='Start' /&gt;" Guid="6841df1b-9fd4-4216-9760-980685389fe6" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAVQAAAAxCAYAAACF3FHoAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHmSURBVHhe7dhRSitBEAVQUQOC4F7chwtxJX646XE60rxOd3UyiTWBB+fCgaSqJp+XJA9rFgBShEMArnc6OLw/Lq+fz8vb12F5+wbgxNqNpSNLV/b9ufr35uXjKf4AAAalM9sOXf2+KG0bPQDAXPdN9ffF8Wd+cAzAXOnOoVD9Zwpwg7U7x0KNDgG4SKECJFGoAEkUKkAShQqQRKECJFGoAEkUKkAShQqQRKECJFGoAEkUKkAShcpd9Ilu4H+nUNndLLO7fp6hJtpBFoXK7mr69yXn7jLVRDvIolDZXc25WZT2PrrZuo/SPgdZFCq7axPtiyjX7KOb2bykfQ6yKFTuIsrspp9X7a6m35e0sy07yKJQuas2s10/b3d9opt2tmUHWRQqu6rZMq9pZ/2uT3TTzrbsIItCZXc1t8xm85pLsy07yKJQ2d0sl+5m8zbR8+2s39VEN/BXCpW76BPdFG3OzWuim3bWahPt4a8UKkAShQqQRKECJFGoAEkUKkAShQqQRKECJFGoAEkUKkAShQqQRKECJFGoAEnGQv2KDwE4Y+3OoVBfP5/jYwCmSncOhXp4fwyPAZgr3TkUavHy8RQ+AMCodGbboauTN8e2Pf78958qwGjtxtKR3TfTahgAcJtwCMBVHpYfCWuPC8nltiYAAAAASUVORK5CYII=" InformativeScreenshot="534ae2d01a9cf850c05a2bbedb2005d2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='The Automation Challenge' /&gt;" SearchSteps="Selector, FuzzySelector, Image, CV" Version="V3" Visibility="Interactive" />
               </uix:NClick.Target>
             </uix:NClick>
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_CompanyData]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="450,565" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+              <ui:ForEachRow.Body>
+                <ActivityAction x:TypeArguments="sd:DataRow">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,376" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,183" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Process: &quot;+CurrentRow(&quot;company_name&quot;).ToString]" />
+                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="354,108" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Process: &quot;+CurrentRow(&quot;company_name&quot;).ToString]" />
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEachRow.Body>
+            </ui:ForEachRow>
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>
